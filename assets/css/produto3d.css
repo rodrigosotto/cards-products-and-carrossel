@@ -1,0 +1,196 @@
+body {
+  background: #eee;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  height: 100%;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f6799b;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #f6799b;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 950px;
+  height: 72vh;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#vertical {
+  width: 100%;
+  max-width: 600px;
+  height: 70vh;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* .swiper-thumbs {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+} */
+
+.swiper-thumb {
+  width: 15vw;
+  max-width: 100px;
+  /* Reduz a largura máxima dos thumbs */
+  height: auto;
+  margin: 0 1vw;
+  /* Espaçamento reduzido entre as thumbs */
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.title-swiper {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-body h5 a {
+  color: #444 !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.flags img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+
+/* Paginação */
+.page-item.active .page-link {
+  background-color: #ffc738 !important;
+  color: #f6799b;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.page-item.disabled .page-link {
+  background-color: #f6799b;
+  color: #fff;
+}
+
+.btn-voltar {
+  padding: 10px 30px 10px 30px;
+  background-color: #ffc738;
+  color: #f6799b;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn-voltar:hover {
+  background-color: #f6799b;
+  color: #ffc738;
+  text-decoration: none;
+}
+
+footer span.text-muted{
+  color: white !important;
+}
+
+.main-image {
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+.swiper-zoom-container img {
+      width: 100%;
+      height: 100%;
+}
+
+/* Corrige problemas de zoom e scrolling */
+.swiper-container {
+  touch-action: pan-x pan-y; /* Adiciona suporte para o zoom safari */
+}
+
+
+/* Consultas de mídia para ajustar o layout em diferentes tamanhos de tela */
+@media screen and (min-width: 541px) and (max-width: 768px) {
+  .swiper {
+    height: 51vh;
+  }
+
+  #vertical {
+    height: 85vh;
+  }
+
+  .swiper-thumb {
+    width: 20vw;
+    max-width: 80px;
+    /* Reduz ainda mais a largura máxima dos thumbs */
+    margin: 0 0.5vw;
+    /* Reduz ainda mais o espaçamento entre as thumbs */
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 540px) {
+  #vertical {
+    height: 55vh;
+  }
+
+  .swiper {
+    height: 43vh;
+}
+}
+@media screen and (max-width: 480px) {
+  .swiper {
+    height: 40vh;
+}
+  .title-swiper {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  #vertical {
+    height: 55vh;
+  }
+}
