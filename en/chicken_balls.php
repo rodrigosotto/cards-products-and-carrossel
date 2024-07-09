@@ -25,7 +25,7 @@
 <header>
 <a href="https://www.misslaura.com.br/misslaura" 
 target="_blank">
-<img src="./../../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
+<img src="./../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
 </a>
 
 </header>
