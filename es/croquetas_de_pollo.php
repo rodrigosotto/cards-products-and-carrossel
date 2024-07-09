@@ -12,25 +12,23 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-        /* Estilo personalizado para o header e rodapé */
-        header {
-            background-color: #f6799b;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-    </style>
+    /* Estilo personalizado para o header e rodapé */
+    header {
+      background-color: #f6799b;
+      padding: 10px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-<header>
-<a href="https://www.misslaura.com.br/misslaura" 
-target="_blank">
-<img src="./../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
-</a>
+  <header>
+    <a href="https://www.misslaura.com.br/misslaura" target="_blank">
+      <img src="./../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
+    </a>
 
-</header>
-<h1 class="title-swiper">Croquetas de Pollo</h1>
+  </header>
+  <h1 class="title-swiper">Croquetas de Pollo</h1>
 
   <!-- Swiper -->
   <div class="swiper mySwiper">
@@ -60,7 +58,7 @@ target="_blank">
   </div>
 
   <!-- Thumbnails -->
-    <div class="swiper-thumbs" style="margin-top: 50px; margin-bottom: 50px; display: flex; justify-content: center; align-items: center;">
+  <div class="swiper-thumbs" style="margin-top: 50px; margin-bottom: 50px; display: flex; justify-content: center; align-items: center;">
     <?php
     // Iterar sobre as imagens novamente para criar os thumbs
     foreach ($imagens as $index => $imagem) {
@@ -75,17 +73,36 @@ target="_blank">
 
   <!-- Botão voltar -->
   <div class="row d-flex justify-content-center align-items-center">
-  <a href="<?php echo '/p3d/?lang=es&pagina=1';?>" class="btn-voltar">Ver Todos os Produtos</a>
+    <?php
+    // Função para obter o valor de um parâmetro da URL
+    function getQueryParam($param)
+    {
+      return isset($_GET[$param]) ? $_GET[$param] : null;
+    }
+
+    // Obtendo o valor do parâmetro 'lang' da URL
+    $idiomaSelecionado = getQueryParam('lang');
+
+    // Determinando a string com base no idioma selecionado
+    $textoBotao = ($idiomaSelecionado == 'en') ? 'See all Products' : 'Ver todos los Productos';
+
+    // Definindo o valor da página atual (exemplo)
+    $paginaAtual = 1; // Altere conforme necessário
+    ?>
+
+    <a href="<?php echo '/p3d/?lang=es&pagina=' . $paginaAtual; ?>" class="btn-voltar"><?php echo $textoBotao; ?></a>
+
   </div>
 
-<!-- Rodapé fixo -->
-<footer class="footer mt-5">
+  <!-- Rodapé fixo -->
+  <footer class="footer mt-5">
     <div class="container">
-        <span class="text-muted">&copy; <?php echo date("Y"); ?> MissLaura. Todos os direitos reservados.</span>
+      <span class="text-muted">&copy; <?php echo date("Y"); ?> MissLaura. Todos os direitos reservados.</span>
     </div>
-</footer>
+  </footer>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./../assets/js/produto3d.js"></script>
 </body>
+
 </html>

@@ -75,7 +75,7 @@ target="_blank">
   </div>
 <!-- Botão voltar -->
   <div class="row d-flex justify-content-center align-items-center mb-5">
-    <a href="/p3d/?lang=en" class="btn-voltar" >Ver Todos os Produtos</a>
+    <a href="/p3d/?lang=en" class="btn-voltar" >See All Products</a>
   </div>
     <!-- Rodapé fixo -->
     <?php require_once './../assets/includes/footer.php'; ?>

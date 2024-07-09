@@ -6,7 +6,7 @@ $idiomaSelecionado = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 ?>
 
 <div class="container mt-5">
-    <h2 class="text-center mb-3">3D PRODUCTS</h2>
+    <h2 class="text-center mb-3"><?php echo ($idiomaSelecionado == 'en' ? '3D PRODUCTS' : 'PRODUCTOS EN 3D') ?></h2>
     <h5 class="text-center mt-2 mb-4"><?php echo ($idiomaSelecionado == 'en' ? 'Version of packaging in' : 'Versión del embalaje en') ?>
         <select class="form-select form-select-lg mb-3" id="languageSelect" onchange="changeLanguage(this.value)">
             <option value="" disabled <?php echo ($idiomaSelecionado != 'en' && $idiomaSelecionado != 'es') ? 'selected' : ''; ?>><?php echo ($idiomaSelecionado == 'en' ? 'Choose a Language' : 'Elija un idioma') ?></option>

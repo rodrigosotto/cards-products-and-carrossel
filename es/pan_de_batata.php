@@ -75,7 +75,25 @@ target="_blank">
 
   <!-- Botão voltar -->
   <div class="row d-flex justify-content-center align-items-center">
-  <a href="<?php echo '/p3d/?lang=es&pagina=2';?>" class="btn-voltar">Ver Todos os Produtos</a>
+    <?php
+    // Função para obter o valor de um parâmetro da URL
+    function getQueryParam($param)
+    {
+      return isset($_GET[$param]) ? $_GET[$param] : null;
+    }
+
+    // Obtendo o valor do parâmetro 'lang' da URL
+    $idiomaSelecionado = getQueryParam('lang');
+
+    // Determinando a string com base no idioma selecionado
+    $textoBotao = ($idiomaSelecionado == 'en') ? 'See all Products' : 'Ver todos los Productos';
+
+    // Definindo o valor da página atual (exemplo)
+    $paginaAtual = 2; // Altere conforme necessário
+    ?>
+
+    <a href="<?php echo '/p3d/?lang=es&pagina=' . $paginaAtual; ?>" class="btn-voltar"><?php echo $textoBotao; ?></a>
+
   </div>
 
 <!-- Rodapé fixo -->
