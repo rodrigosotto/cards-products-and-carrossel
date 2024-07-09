@@ -49,7 +49,7 @@
 <header>
 <a href="https://www.misslaura.com.br/misslaura" 
 target="_blank">
-<img src="../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
+<img src="../../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
 </a>
 
 </header>
@@ -106,8 +106,8 @@ target="_blank">
                 echo "<div class='card-body'>";
                 echo "<h5 class='card-title'><a href='" . $arquivo . "'>" . strtoupper($produtoNomeSemUnderscore) . "</a></h5>";
                 echo "<div class='flags'>";
-                echo "<a href='../?pagina=1'><img src='../assets/images/united-states.png' alt='USA'></a>";
-                echo "<a href='./?pagina=1'><img src='../assets/images/spain.png' alt='Spain'></a>";
+                echo "<a href='./p3d/?lang=en'><img src='../assets/images/united-states.png' alt='USA'></a>";
+                echo "<a href='/p3d/?lang=en'><img src='../assets/images/spain.png' alt='Spain'></a>";
                 echo "</div>";
                 echo "</div>";
                 echo "</div>";

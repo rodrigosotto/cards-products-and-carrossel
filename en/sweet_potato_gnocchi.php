@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./assets/css/produto3d.css" />
+  <link rel="stylesheet" href="./../assets/css/produto3d.css" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
         /* Estilo personalizado para o header e rodapé */
@@ -27,7 +27,7 @@
 <header>
 <a href="https://www.misslaura.com.br/misslaura" 
 target="_blank">
-<img src="./assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
+<img src="./../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
 </a>
 
 </header>
@@ -38,7 +38,7 @@ target="_blank">
     <div class="swiper-wrapper">
       <?php
       // Diretório da pasta específica
-      $pastaEspecifica = './assets/images/produtos-ingles/sweet_potato_gnocchi/';
+      $pastaEspecifica = './../assets/images/img-en/sweet_potato_gnocchi/';
    
 
       // Lista de imagens na pasta específica
@@ -77,7 +77,8 @@ target="_blank">
 
 <!-- Botão voltar -->
 <div class="row d-flex justify-content-center align-items-center mb-5">
-    <a href="./?pagina=1" class="btn-voltar" >Ver Todos os Produtos</a>
+    <a href="/p3d/?lang=en" class="btn-voltar" >Ver Todos os Produtos</a>
   </div>
     <!-- Rodapé fixo -->
-    <?php require_once 'assets/includes/footer.php'; ?>
+    <?php require_once './../assets/includes/footer.php'; ?>
+

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+
   var mainSwiper = new Swiper(".mySwiper", {
     effect: "fade",
     loop: true,

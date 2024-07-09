@@ -8,35 +8,33 @@
   <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />-->
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../assets/css/produto3d.css" />
+  <link rel="stylesheet" href="./../assets/css/produto3d.css" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-        /* Estilo personalizado para o header e rodapé */
-        header {
-            background-color: #f6799b;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-    </style>
+    /* Estilo personalizado para o header e rodapé */
+    header {
+      background-color: #f6799b;
+      padding: 10px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-<header>
-<a href="https://www.misslaura.com.br/misslaura" 
-target="_blank">
-<img src="../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
-</a>
+  <header>
+    <a href="https://www.misslaura.com.br/misslaura" target="_blank">
+      <img src="./../assets/images/misslaura-logotipo.png" alt="MissLaura Logo" class="logo">
+    </a>
 
-</header>
-<h1 class="title-swiper">Pan Sin Queso</h1>
+  </header>
+  <h1 class="title-swiper">Pan Sin Queso</h1>
 
   <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <?php
       // Diretório da pasta específica
-      $pastaEspecifica = '../assets/images/productos_es/pan_sin_queso/';
+      $pastaEspecifica = './../assets/images/img-es/pan_sin_queso/';
 
       // Lista de imagens na pasta específica
       $imagens = scandir($pastaEspecifica);
@@ -59,7 +57,7 @@ target="_blank">
   </div>
 
   <!-- Thumbnails -->
-    <div class="swiper-thumbs" style="margin-top: 50px; margin-bottom: 50px; display: flex; justify-content: center; align-items: center;">
+  <div class="swiper-thumbs" style="margin-top: 50px; margin-bottom: 50px; display: flex; justify-content: center; align-items: center;">
     <?php
     // Iterar sobre as imagens novamente para criar os thumbs
     foreach ($imagens as $index => $imagem) {
@@ -74,17 +72,18 @@ target="_blank">
 
   <!-- Botão voltar -->
   <div class="row d-flex justify-content-center align-items-center">
-    <a href="../productos_espanhol/?pagina=1" class="btn-voltar" >Ver Todos os Produtos</a>
+    <a href="<?php echo '/p3d/?lang=es&pagina=2'; ?>" class="btn-voltar">Ver Todos os Produtos</a>
   </div>
 
-<!-- Rodapé fixo -->
-<footer class="footer mt-5">
+  <!-- Rodapé fixo -->
+  <footer class="footer mt-5">
     <div class="container">
-        <span class="text-muted">&copy; <?php echo date("Y"); ?> MissLaura. Todos os direitos reservados.</span>
+      <span class="text-muted">&copy; <?php echo date("Y"); ?> MissLaura. Todos os direitos reservados.</span>
     </div>
-</footer>
+  </footer>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="../assets/js/produto3d.js"></script>
+  <script src="./../assets/js/produto3d.js"></script>
 </body>
+
 </html>
